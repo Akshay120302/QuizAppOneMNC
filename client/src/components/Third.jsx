@@ -67,7 +67,7 @@ export const Third = ({ restartGame, score, questions, wrongans, currentQuestion
             </div>
           </div>
           {/* <img className="frame" alt="Frame" src="../images/Third/frame-1261155442.svg" /> */}
-          <Link to="/home">
+          <Link to="/">
             <svg className="frame3" width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.6461 23.6604L16.5561 24.6771C16.0945 25.1076 15.3482 25.1076 14.8915 24.6771L5.34617 15.7786C4.88461 15.3481 4.88461 14.6519 5.34617 14.226L14.8915 5.32288C15.3531 4.89237 16.0994 4.89237 16.5561 5.32288L17.6461 6.33959C18.1126 6.77467 18.1028 7.48454 17.6265 7.91046L11.7097 13.1681H25.8216C26.4746 13.1681 27 13.6581 27 14.2672V15.7328C27 16.3419 26.4746 16.8319 25.8216 16.8319H11.7097L17.6265 22.0895C18.1077 22.5155 18.1175 23.2253 17.6461 23.6604Z" fill="white" fillOpacity="0.9" />
             </svg>
@@ -100,7 +100,7 @@ export const Third = ({ restartGame, score, questions, wrongans, currentQuestion
           </div>
           <div className="text-wrapper3-16">Play Again</div>
         </div>
-        <Link to="/home">
+        <Link to="/">
           <div className="group3-2" onClick={() => {navigate('/')}}>
             {/* <img className="vector-2" alt="Vector" src="../images/Third/vector-2.svg" /> */}
             <svg className="vector3-3" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">

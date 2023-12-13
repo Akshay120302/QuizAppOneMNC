@@ -15,7 +15,7 @@ export default function App() {
         <Route path='/quiz' element={<First/>} />
         <Route path='/LeaderBoard' element={<Second/>} />
         <Route path='/scoreboard' element={<Third/>} />
-        <Route path='/home' element={<Fifth/>} />
+        <Route path='/' element={<Fifth/>} />
         <Route path='/CreateQuiz' element={<CreateQuiz/>} />
         <Route path='/signup' element={<MyLoginModal/>} />
       </Routes>

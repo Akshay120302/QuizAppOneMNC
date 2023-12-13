@@ -34,7 +34,7 @@ app.listen(3001, () => {
 
 app.use(
   cors({
-    origin: 'http://localhost:5173', // Update with your client's origin
+    origin: '*', // Update with your client's origin
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );

@@ -56,7 +56,7 @@ function Fifth() {
       // console.log(userListings);
       setShowListing(true);
       closeMenu();
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       setShowListingsError(true);
     }
@@ -114,7 +114,7 @@ function Fifth() {
     }
     setListings(data);
     setLoading(false);
-    navigate(`/home?title=${searchTerm}`);
+    navigate(`/?title=${searchTerm}`);
   };
 
   const handleSubmit = (e) => {

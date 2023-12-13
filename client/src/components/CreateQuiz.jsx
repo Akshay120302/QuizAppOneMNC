@@ -188,7 +188,7 @@ export const CreateQuiz = ({ quizUpdate, listingId }) => {
         // console.log(data);
         closeAlert();
         alert("Successfully Uploaded Quiz!!");
-        setTimeout(navigate("/home"), 3000);
+        setTimeout(navigate("/"), 3000);
       } else {
         console.error("Failed to save quiz data:", res.status, res.statusText);
       }
@@ -239,7 +239,7 @@ export const CreateQuiz = ({ quizUpdate, listingId }) => {
             <div className="ellipse1-2" />
             <div className="ellipse1-3" />
 
-            <Link to="/home">
+            <Link to="/">
               <svg
                 className="frame1"
                 width="32"
