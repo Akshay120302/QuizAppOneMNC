@@ -43,11 +43,11 @@ app.use('/API/listing', listingRouter);
 
 app.use(express.static(path.join(_dirname, '/client/build')));
 
-app.get('*', (res,req) => {
+// app.get('*', (res,req) => {
 
-    res.sendFile(path.join(_dirname, 'client', 'build', 'index.html'));
+//     res.sendFile(path.join(_dirname, 'client', 'build', 'index.html'));
 
-});
+// });
 
 
 app.use((err,req,res,next) =>{
