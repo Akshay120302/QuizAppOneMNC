@@ -1,0 +1,69 @@
+.AlertBox {
+  background-color: #0026ff80;
+  border-radius: 10px;
+  height: 126px;
+  left: 47%;
+  padding: 48px 84px;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 347px;
+}
+
+.closeALert {
+  display: flex;
+  justify-content: right;
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  margin-top: -40px;
+  margin-left: -83px;
+}
+
+.fa-xmark {
+  margin-top: 0px;
+  width: 22px;
+  height: 20px;
+}
+
+.btnAlertBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 31px;
+  margin-left: -22px;
+}
+
+.btnAlert {
+  margin: 20px;
+  width: 150px;
+  height: 40px;
+  color: #000;
+  margin-left: 43px;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 600;
+  border-color: chartreuse;
+}
+
+.btnAlertP {
+  margin: 20px;
+  width: 150px;
+  height: 40px;
+  color: #000000;
+  margin-left: 14px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-color: crimson;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
