@@ -32,12 +32,10 @@ app.listen(3001, () => {
   console.log('Server is up and running at 3001');
 });
 
-app.use(
-  cors({
-    origin: 'http://localhost:5173', // Update with your client's origin
-    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-  })
-);
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://quizapp-onemnc.onrender.com'],
+    credentials: true,
+  }));
 
 app.use('/API/user/', userRouter);
 app.use('/API/auth/', authRouter);
