@@ -41,13 +41,13 @@ app.use("/API/user/" , userRouter);
 app.use("/API/auth/" , authRouter);
 app.use('/API/listing', listingRouter);
 
-app.use(express.static(path.join(_dirname, 'client' , 'dist' , 'index.html')));
+app.use(express.static(path.join(_dirname, '/client/dist')));
 
-// app.get('*', (res,req) => {
+app.get('*', (res,req) => {
 
-//     res.sendFile(path.join(_dirname, '/client'))
+    res.sendFile(path.join(_dirname, 'client' , 'dist' , 'index.html'));
 
-// })
+});
 
 
 app.use((err,req,res,next) =>{
