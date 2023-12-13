@@ -43,10 +43,10 @@ app.use('/API/user/', userRouter);
 app.use('/API/auth/', authRouter);
 app.use('/API/listing', listingRouter);
 
-app.use(express.static(path.join(_dirname, '/client/build')));
+app.use(express.static(path.join(_dirname, '/client/dist')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(_dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(_dirname, 'client', 'dist', 'index.html'));
 });
 
 app.use((err, req, res, next) => {
