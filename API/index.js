@@ -41,11 +41,11 @@ app.use("/API/user/" , userRouter);
 app.use("/API/auth/" , authRouter);
 app.use('/API/listing', listingRouter);
 
-app.use(express.static(path.join(_dirname, '/client/dist')));
+app.use(express.static(path.join(_dirname, '/client/build')));
 
 app.get('*', (res,req) => {
 
-    res.sendFile(path.join(_dirname, 'client' , 'dist' , 'index.html'));
+    res.sendFile(path.join(_dirname, 'client', 'build', 'index.html'));
 
 });
 
