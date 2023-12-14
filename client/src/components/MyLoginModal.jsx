@@ -379,8 +379,6 @@ const MyLoginModal = ({ closeLoginModal }) => {
                   </>
                 ) : (
                   <>
-                    <span className="centre">Or</span>
-                    <br />
                     <span
                       className="Login"
                       onClick={() => {

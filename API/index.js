@@ -25,6 +25,11 @@ mongoose
 const _dirname = path.resolve();
 const app = express();
 
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://quizapp-onemnc.onrender.com'],
+    credentials: true,
+  }));
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -32,10 +37,6 @@ app.listen(3001, () => {
   console.log('Server is up and running at 3001');
 });
 
-app.use(cors({
-    origin: ['http://localhost:5173', 'https://quizapp-onemnc.onrender.com'],
-    credentials: true,
-  }));
 
 app.use('/API/user/', userRouter);
 app.use('/API/auth/', authRouter);

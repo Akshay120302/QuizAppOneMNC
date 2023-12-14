@@ -93,8 +93,6 @@ function Fifth() {
 
   const [listingID, setListingID] = useState("");
 
-
-
   // Search functionality for Menu
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -122,7 +120,21 @@ function Fifth() {
     fetchListings();
   };
 
-// console.log(listings)
+  // console.log(listings)
+
+  const onShowMoreClick = async () => {
+    const numberOfListings = listings.length;
+    const startIndex = numberOfListings;
+    const urlParams = new URLSearchParams(location.search);
+    urlParams.set('startIndex', startIndex);
+    const searchTerm = urlParams.toString();
+    const res = await fetch(`/API/listing/get?title=${searchTerm}`);
+    const data = await res.json();
+    if (data.length < 6) {
+      setShowMore(false);
+    }
+    setListings([...listings, ...data]);
+  };
 
   return (
     <>
@@ -131,7 +143,12 @@ function Fifth() {
       ) : (
         <>
           {quiz ? (
-            <First questionsID={questionsID} userListings={userListings} listings = {listings} showSearch = {showSearch}/>
+            <First
+              questionsID={questionsID}
+              userListings={userListings}
+              listings={listings}
+              showSearch={showSearch}
+            />
           ) : (
             <div className="quiz-app-UI-design">
               <div className="div5">
@@ -238,9 +255,9 @@ function Fifth() {
                       <Menu
                         closeMenu={closeMenu}
                         handleShowListings={handleShowListings}
-                        setShowSearch = {setShowSearch}
-                        setSearchTerm ={setSearchTerm}
-                        handleSubmit = {handleSubmit}
+                        setShowSearch={setShowSearch}
+                        setSearchTerm={setSearchTerm}
+                        handleSubmit={handleSubmit}
                         searchTerm={searchTerm}
                       />
                     )}
@@ -280,7 +297,8 @@ function Fifth() {
                 </div>
                 {showListing ? (
                   <div className="container5">
-                    <h1 className="center">Your Listings</h1>
+                    <h1 className="UserListings">Your Listings</h1>
+                    <br />
                     {userListings.map((listing, index = 0) => (
                       <div className="items5" key={listing._id}>
                         {/* {console.log(listing.questions)} */}
@@ -296,7 +314,7 @@ function Fifth() {
                         </p>
                         <div className="flex flex-col item-center">
                           <button
-                            style={{ color: "red" }}
+                            style={{ color: "red" , width: "105px" }}
                             onClick={() => handleQuizDelete(listing._id)}
                           >
                             Delete
@@ -319,7 +337,7 @@ function Fifth() {
                   <div className="container5">
                     {showSearch ? (
                       <React.Fragment>
-                        <h1 className="center">Your Search Results:</h1>
+                        <h1 className="UserListings" style={{ marginLeft: "0px" , marginRight: "0px" }} >Your Search Results:</h1>
                         {listings.map((listing, index) => (
                           <div className="items5" key={listing._id}>
                             <p
@@ -333,10 +351,22 @@ function Fifth() {
                             </p>
                           </div>
                         ))}
+
+                        
+                        {/* <div>
+                        {showMore && (
+                          <button
+                            onClick={onShowMoreClick}
+                            style={{ color: "green" }}
+                          >
+                            Show more
+                          </button>
+                        )}
+                        </div> */}
                       </React.Fragment>
                     ) : (
                       <React.Fragment>
-                        <h1 className="center">Trending Quizzes</h1>
+                        <h1 className="UserListings">Trending Quizzes</h1>
                         <div className="items5"></div>
                         <div className="items5"></div>
                         <div className="items5"></div>

@@ -39,7 +39,6 @@ export default function OAuth({closeLoginModal}) {
     }
   return (
     <button type="button" onClick={handleGoogleClick} style={{
-        margin: "0px 20px 20px 63px",
         width: "200px",
         height: "50px",
         borderRadius: "10px",

@@ -392,8 +392,6 @@
   border-radius: 20px;
 }
 
-
-
 .profileImgFifth {
   display: flex;
   align-items: center;
@@ -421,15 +419,33 @@
   margin-left: 30px;
 }
 
-@media screen and (min-width:600px) {
+.UserListings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  margin-left: 635px;
+  margin-right: 647px;
+  width: 219px;
+}
 
+@media screen and (min-width: 600px) {
   .quiz-app-UI-design .div5 {
     background-color: #ffffff;
     height: 100%;
     overflow: hidden;
     position: relative;
     width: 1440px;
-}
+  }
+
+  .UserDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
   .quiz-app-UI-design .overlap-group5 {
     height: 304px;
@@ -602,7 +618,7 @@
     width: -moz-fit-content;
     width: fit-content;
     margin-left: -140px;
-}
+  }
 
   .quiz-app-UI-design .ellipse-wrapper5 {
     display: flex;
@@ -730,39 +746,52 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
+  }
 
-.items5 {
-  display: flex;
-  width: auto;
-  height: 233px;
-  background-color: #e6e6e6;
-  flex-grow: 1;
-  flex-basis: fit-content;
-  margin: 20px;
-  border-radius: 20px;
-}
+  .items5 {
+    display: flex;
+    width: auto;
+    height: 233px;
+    background-color: #e6e6e6;
+    flex-grow: 1;
+    flex-basis: fit-content;
+    margin: 20px;
+    border-radius: 20px;
+  }
 
-.profileImgFifth{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-}
+  .profileImgFifth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
 
-.QuizTitle{
-  width: 150px;
-  height: 100%;
-}
+  .QuizTitle {
+    width: 150px;
+    height: 100%;
+  }
 
-.QuizName {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 150px;
-  height: 100%;
-}
+  .QuizName {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 150px;
+    height: 100%;
+  }
 
+  .adjust {
+    gap: 74px;
+    display: flex;
+  }
+
+  .center-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 29px;
+    font-family: cursive;
+  }
 }
