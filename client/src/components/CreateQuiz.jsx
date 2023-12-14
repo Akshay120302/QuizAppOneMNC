@@ -189,6 +189,7 @@ export const CreateQuiz = ({ quizUpdate, listingId }) => {
         closeAlert();
         alert("Successfully Uploaded Quiz!!");
         setTimeout(navigate("/"), 3000);
+        window.location.reload();
       } else {
         console.error("Failed to save quiz data:", res.status, res.statusText);
       }
