@@ -17,7 +17,7 @@ export default function OAuth({closeLoginModal}) {
 
             console.log(result);
 
-            const res = await fetch('http://localhost:3001/API/auth/google', {
+            const res = await fetch('/API/auth/google', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
