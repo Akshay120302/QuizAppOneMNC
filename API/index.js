@@ -33,7 +33,7 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-app.listen(3001, () => {
+app.listen(3001, '0.0.0.0', () => {
   console.log('Server is up and running at 3001');
 });
 
