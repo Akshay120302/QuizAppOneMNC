@@ -378,6 +378,7 @@ function Fifth() {
                               className="QuizName"
                               onClick={() => {
                                 setQuestionsID(index);
+                                setShowSearch(true);
                                 handleQuizStart();
                               }}
                             >

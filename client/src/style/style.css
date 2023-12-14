@@ -371,7 +371,7 @@
 }
 
 .quiz-app-UI-design #result {
-  padding: .7rem 0;
+  padding: 0.7rem 0;
   text-align: center;
   font-weight: 600;
   font-size: 1.3rem;
@@ -382,8 +382,8 @@
   height: 30px;
   border-radius: 50%;
   line-height: 30px;
-  margin-right: .5rem;
-  margin-bottom: .5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: var(--light-purple-color);
   color: var(--light-color);
 }
@@ -402,7 +402,7 @@
   font-weight: bold;
   width: 100px;
   height: 50px;
-  margin: .5rem auto 1rem auto;
+  margin: 0.5rem auto 1rem auto;
   color: var(--light-purple-color);
 }
 
@@ -418,8 +418,8 @@
   font-weight: 500;
   background-color: var(--light-purple-color);
   color: var(--light-color);
-  padding: .2rem .4rem;
-  border-radius: .2rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
   margin-top: 0.5rem;
   display: inline-block;
 }
@@ -473,10 +473,10 @@
   border: none;
   border-radius: 0.5rem;
   outline: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   margin: 0 auto 0 auto;
   text-transform: uppercase;
   cursor: pointer;
@@ -525,17 +525,17 @@
   width: 54%;
 }
 
-.textarea{
+.textarea {
   margin-top: -20px;
   padding: 10px;
 }
 
-.Value{
+.Value {
   border: none;
   outline: none;
 }
 
-.t1{
+.t1 {
   margin-top: 65px;
   margin-left: 85px;
 }
@@ -550,15 +550,14 @@
   outline: none;
 }
 
-input .no.OfQues{
+input .no.OfQues {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
 }
 
-@media screen and (min-width:600px) {
-
+@media screen and (min-width: 600px) {
   .quiz-app-UI-design .div1 {
     background-color: #fff;
     height: 765px;
@@ -764,7 +763,7 @@ input .no.OfQues{
   }
 
   .quiz-app-UI-design #result {
-    padding: .7rem 0;
+    padding: 0.7rem 0;
     text-align: center;
     font-weight: 600;
     font-size: 1.3rem;
@@ -775,8 +774,8 @@ input .no.OfQues{
     height: 30px;
     border-radius: 50%;
     line-height: 30px;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     background-color: var(--light-purple-color);
     color: var(--light-color);
   }
@@ -795,7 +794,7 @@ input .no.OfQues{
     font-weight: bold;
     width: 100px;
     height: 50px;
-    margin: .5rem auto 1rem auto;
+    margin: 0.5rem auto 1rem auto;
     color: var(--light-purple-color);
   }
 
@@ -811,8 +810,8 @@ input .no.OfQues{
     font-weight: 500;
     background-color: var(--light-purple-color);
     color: var(--light-color);
-    padding: .2rem .4rem;
-    border-radius: .2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
     margin-top: 0.5rem;
     display: inline-block;
   }
@@ -820,12 +819,15 @@ input .no.OfQues{
   .quiz-app-UI-design .quiz-options {
     list-style-type: none;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 1rem 0;
+    margin-left: 147px;
     margin-top: 320px;
     width: 100%;
     height: 304px;
     padding: 0px 84px;
-    gap: 30px;
+    gap: 30px 245px;
 }
 
   .quiz-app-UI-design .quiz-options .LI {
@@ -864,10 +866,10 @@ input .no.OfQues{
     border: none;
     border-radius: 0.5rem;
     outline: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 0 auto 0 auto;
     text-transform: uppercase;
     cursor: pointer;
@@ -893,7 +895,6 @@ input .no.OfQues{
   }
 
   li {
-
     width: 250px;
     height: 20px;
   }
@@ -903,15 +904,29 @@ input .no.OfQues{
     display: flex;
     justify-content: center;
     flex-direction: row;
-}
+  }
 
-.QuestionText {
-  position: inherit;
-  margin-top: 44px;
-  width: 1223px;
-}
-.quizTitle {
-  display: grid;
-  margin-right: 572px;
+  .QuestionText {
+    position: inherit;
+    margin-top: 44px;
+    width: 1223px;
+  }
+  .quizTitle {
+    display: grid;
+    margin-right: 572px;
+  }
+
+  .quiz-app-UI-design .quiz-optionsCRQ {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    margin-left: 19px;
+    margin-top: 320px;
+    width: 100%;
+    height: 304px;
+    padding: 15px 90px;
+    gap: 50px 209px;
 }
 }

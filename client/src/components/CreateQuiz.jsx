@@ -301,7 +301,7 @@ export const CreateQuiz = ({ quizUpdate, listingId }) => {
               {/* <input type="text" /> */}
             </p>
 
-            <ul className="quiz-options">
+            <ul className="quiz-optionsCRQ">
               {[...Array(4)].map((_, optionIndex) => (
                 <React.Fragment key={optionIndex}>
                   <li className="LI">
