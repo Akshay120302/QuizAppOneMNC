@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import MyLoginModal from "./MyLoginModal.jsx";
@@ -129,6 +129,10 @@ function Fifth() {
     }
     setListings([...listings, ...data]);
   };
+
+  useEffect(() => {
+    handleSubmit(); // Call the function on component mount
+  }, []);
 
   return (
     <>
@@ -382,10 +386,10 @@ function Fifth() {
                             </p>
                           </div>
                         ))}
+                        {/* <div className="items5"></div>
                         <div className="items5"></div>
                         <div className="items5"></div>
-                        <div className="items5"></div>
-                        <div className="items5"></div>
+                        <div className="items5"></div> */}
                       </React.Fragment>
                     )}
                   </div>

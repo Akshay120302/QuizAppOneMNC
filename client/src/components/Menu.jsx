@@ -17,8 +17,7 @@ const Menu = ({
   handleSubmit,
   setSearchTerm,
   searchTerm,
-  setShowListing,
-  showListing
+  setShowListing
 }) => {
   const navigate = useNavigate();
 
