@@ -40,12 +40,9 @@ function Fifth() {
   const handleShowListings = async () => {
     try {
       setShowListingsError(false);
-      const res = await fetch(
-        `/API/user/listings/${currentUser._id}`,
-        {
-          credentials: "include",
-        }
-      );
+      const res = await fetch(`/API/user/listings/${currentUser._id}`, {
+        credentials: "include",
+      });
       const data = await res.json();
       if (data.success === false) {
         setShowListingsError(true);
@@ -68,13 +65,10 @@ function Fifth() {
 
   const handleQuizDelete = async (listingId) => {
     try {
-      const res = await fetch(
-        `/API/listing/delete/${listingId}`,
-        {
-          method: "DELETE",
-          credentials: "include",
-        }
-      );
+      const res = await fetch(`/API/listing/delete/${listingId}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);
@@ -126,7 +120,7 @@ function Fifth() {
     const numberOfListings = listings.length;
     const startIndex = numberOfListings;
     const urlParams = new URLSearchParams(location.search);
-    urlParams.set('startIndex', startIndex);
+    urlParams.set("startIndex", startIndex);
     const searchTerm = urlParams.toString();
     const res = await fetch(`/API/listing/get?title=${searchTerm}`);
     const data = await res.json();
@@ -259,6 +253,8 @@ function Fifth() {
                         setSearchTerm={setSearchTerm}
                         handleSubmit={handleSubmit}
                         searchTerm={searchTerm}
+                        setShowListing={setShowListing}
+                        showListing={showListing}
                       />
                     )}
 
@@ -314,7 +310,7 @@ function Fifth() {
                         </p>
                         <div className="flex flex-col item-center">
                           <button
-                            style={{ color: "red" , width: "105px" }}
+                            style={{ color: "red", width: "105px" }}
                             onClick={() => handleQuizDelete(listing._id)}
                           >
                             Delete
@@ -337,7 +333,12 @@ function Fifth() {
                   <div className="container5">
                     {showSearch ? (
                       <React.Fragment>
-                        <h1 className="UserListings" style={{ marginLeft: "0px" , marginRight: "0px" }} >Your Search Results:</h1>
+                        <h1
+                          className="UserListings"
+                          style={{ marginLeft: "0px", marginRight: "0px" }}
+                        >
+                          Your Search Results:
+                        </h1>
                         {listings.map((listing, index) => (
                           <div className="items5" key={listing._id}>
                             <p
@@ -352,7 +353,6 @@ function Fifth() {
                           </div>
                         ))}
 
-                        
                         {/* <div>
                         {showMore && (
                           <button
@@ -367,6 +367,21 @@ function Fifth() {
                     ) : (
                       <React.Fragment>
                         <h1 className="UserListings">Trending Quizzes</h1>
+                        {listings.map((listing, index = 0) => (
+                          <div className="items5" key={listing._id}>
+                            {/* {console.log(listing.questions)} */}
+                            <p
+                              className="QuizName"
+                              onClick={() => {
+                                setQuestionsID(index);
+                                handleQuizStart();
+                              }}
+                            >
+                              {/* {console.log(index)} */}
+                              {index + 1}. {listing.title}
+                            </p>
+                          </div>
+                        ))}
                         <div className="items5"></div>
                         <div className="items5"></div>
                         <div className="items5"></div>

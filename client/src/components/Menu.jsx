@@ -17,6 +17,8 @@ const Menu = ({
   handleSubmit,
   setSearchTerm,
   searchTerm,
+  setShowListing,
+  showListing
 }) => {
   const navigate = useNavigate();
 
@@ -59,6 +61,7 @@ const Menu = ({
                 onSubmit={(e) => {
                   e.preventDefault();
                   handleSubmit();
+                  setShowListing(false);
                   closeMenu();
                   setShowSearch(true);
                 }}
