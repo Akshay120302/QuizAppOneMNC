@@ -41,7 +41,7 @@ function Fifth() {
     try {
       setShowListingsError(false);
       const res = await fetch(
-        `http://localhost:3001/API/user/listings/${currentUser._id}`,
+        `/API/user/listings/${currentUser._id}`,
         {
           credentials: "include",
         }
@@ -69,7 +69,7 @@ function Fifth() {
   const handleQuizDelete = async (listingId) => {
     try {
       const res = await fetch(
-        `http://localhost:3001/API/listing/delete/${listingId}`,
+        `/API/listing/delete/${listingId}`,
         {
           method: "DELETE",
           credentials: "include",
