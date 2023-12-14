@@ -23,8 +23,10 @@ const _dirname = path.resolve();
 const app = express();
 
 app.use(cors({
-  origin: '*',
+  origin: ['http://localhost:5173', 'https://quizapp-onemnc.onrender.com'],
   credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'], // Add other necessary headers
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add other necessary methods
 }));
 
 app.use(express.json());
