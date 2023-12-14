@@ -46,8 +46,8 @@ const MyLoginModal = ({ closeLoginModal }) => {
   const [signin, setSignIn] = useState(false);
   const dispatch = useDispatch();
   const url = signin
-    ? "http://localhost:3001/API/auth/signin"
-    : "http://localhost:3001/API/auth/signup";
+    ? "/API/auth/signin"
+    : "/API/auth/signup";
 
   const [updateSuccess , setUpdateSuccess] = useState(false);
 
@@ -145,7 +145,7 @@ const MyLoginModal = ({ closeLoginModal }) => {
       // console.log(currentUser._id);
       dispatch(updateUserStart());
       const res = await fetch(
-        `http://localhost:3001/API/user/update/${currentUser._id}`,
+        `/API/user/update/${currentUser._id}`,
         {
           method: "POST",
           headers: {
@@ -171,7 +171,7 @@ const MyLoginModal = ({ closeLoginModal }) => {
   const handleDelete = async () => {
     try {
       dispatch(deleteUserStart());
-      const res = await fetch(`http://localhost:3001/API/user/delete/${currentUser._id}`, {
+      const res = await fetch(`/API/user/delete/${currentUser._id}`, {
         method: 'DELETE',
         credentials: "include",
       });
