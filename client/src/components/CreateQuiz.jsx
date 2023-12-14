@@ -43,7 +43,7 @@ export const CreateQuiz = ({ quizUpdate, listingId }) => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/API/listing/get/${listingId}`);
+        const res = await fetch(`/API/listing/get/${listingId}`);
         const data = await res.json();
   
         if (data.success === false) {
@@ -160,8 +160,8 @@ export const CreateQuiz = ({ quizUpdate, listingId }) => {
   };
 
   const URL = quizUpdate
-    ? `http://localhost:3001/API/listing/update/${listingId}`
-    : "http://localhost:3001/API/listing/create";
+    ? `/API/listing/update/${listingId}`
+    : "/API/listing/create";
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
