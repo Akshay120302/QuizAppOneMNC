@@ -11,10 +11,7 @@ import path from 'path';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO)
   .then(() => {
     console.log('Connected to database');
   })
@@ -26,9 +23,9 @@ const _dirname = path.resolve();
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://quizapp-onemnc.onrender.com'],
-    credentials: true,
-  }));
+  origin: '*',
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(cookieParser());
