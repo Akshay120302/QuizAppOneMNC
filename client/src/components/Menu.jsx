@@ -80,11 +80,11 @@ const Menu = ({
               <Link to="/CreateQuiz">Create Quiz</Link>
             </div>
 
-            <div className="fir">Contact</div>
+            <div className="fir" style={{cursor: "pointer" }}>Contact</div>
 
-            <div className="fir">About OneMNC</div>
+            <div className="fir" style={{cursor: "pointer" }}>About OneMNC</div>
 
-            <div className="fir">Settings</div>
+            <div className="fir" style={{cursor: "pointer" }}>Settings</div>
           </div>
         </div>
       </div>

@@ -286,8 +286,8 @@ const MyLoginModal = ({ closeLoginModal }) => {
                     {loading ? "Loading..." : "Update"}
                   </button>
                   <div className="adjust">
-                    <span style={{ color: "red" }} onClick={handleDelete}>delete account</span>
-                    <span style={{ color: "red" }} onClick={handleSignOut}>sign out</span>
+                    <span style={{ color: "red" , cursor: "pointer" }} onClick={handleDelete}>delete account</span>
+                    <span style={{ color: "red" , cursor: "pointer" }} onClick={handleSignOut}>sign out</span>
                   </div>
                   <p style={{color : "red"}}>{error ? error : ''}</p>
                   <p style={{color : "green"}}>{updateSuccess ? "User is successfully Updated" : ''}</p>
@@ -368,10 +368,10 @@ const MyLoginModal = ({ closeLoginModal }) => {
                     <p className="signingoogle">
                       Don't have an account?{" "}
                       <span
-                        style={{ color: "blue" }}
+                        style={{ color: "blue" , cursor: "pointer" }}
                         onClick={() => {
                           setSignIn(false);
-                        }}
+                        }} 
                       >
                         Sign Up
                       </span>{" "}
