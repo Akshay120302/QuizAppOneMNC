@@ -928,5 +928,7 @@ input .no.OfQues {
     height: 285px;
     padding: 15px 29px;
     gap: 50px 190px;
+    justify-content: center;
+    align-items: center;
 }
 }
