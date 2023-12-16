@@ -530,7 +530,7 @@ const questions = showSearch ? listings[questionsID].questions : userListings[qu
               </p>
               <div className="text-wrapper1-4">{wrongans}</div>
 
-              <ul className="quiz-options">
+              <ul className="quiz-optionsCRQ">
                 {questions &&
                   questions[currentQuestion] &&
                   questions[currentQuestion].options.map(
