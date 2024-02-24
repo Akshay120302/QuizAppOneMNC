@@ -557,6 +557,13 @@ input .no.OfQues {
   width: 40px;
 }
 
+.selected {
+  /* Add your styling for the selected option here */
+  /* For example, you can add a tick mark or change the background color */
+  /* For demonstration, let's change the background color */
+  background-color: lightgreen;
+}
+
 @media screen and (min-width: 600px) {
   .quiz-app-UI-design .div1 {
     background-color: #fff;
@@ -931,4 +938,13 @@ input .no.OfQues {
     justify-content: center;
     align-items: center;
 }
+
+.selected {
+  /* Add your styling for the selected option here */
+  /* For example, you can add a tick mark or change the background color */
+  /* For demonstration, let's change the background color */
+  background-color: lightgreen;
+  box-shadow: 0 4px 0 0 lightgreen;
+}
+
 }

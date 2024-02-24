@@ -159,6 +159,7 @@ function Fifth() {
                     <div className="ellipse5-4" />
                     <div className="ellipse5-5" />
                   </div>
+                  {showListing ?  '' :(
                   <div className="frame5">
                     <div className="text-wrapper5">Popular</div>
                     <div className="frame5-2">
@@ -240,8 +241,8 @@ function Fifth() {
                         </svg>
                       </div>
                     </div>
-                  </div>
-                  <div className="frame5-4">
+                  </div>)}
+                  <div className={`${showListing ? "frame5-4-Modified" : "frame5-4"}`}>
                     <FontAwesomeIcon
                       icon={faBars}
                       idname="frame5-5"
@@ -271,14 +272,14 @@ function Fifth() {
                     )}
 
                     <div
-                      className="ellipse-wrapper5"
+                      className={`${showListing ? "ellipse-wrapper5-Modified" : "ellipse-wrapper5"}`}
                       onClick={() => setShowLoginModal(true)}
                     >
                       {currentUser ? (
                         <img
                           src={currentUser.avatar}
                           alt="User"
-                          className="profileImgFifth"
+                          className={`profileImgFifth ${showListing ? "profileImgFifthModified" : ""}`}
                         />
                       ) : (
                         <>

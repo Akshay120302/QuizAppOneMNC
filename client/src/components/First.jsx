@@ -200,9 +200,11 @@ export const First = ({ questionsID, userListings, listings, showSearch }) => {
   //     }
   // ];
 
-//   const questions = userListings.find((quiz) => quiz._id === questionsID);
+  //   const questions = userListings.find((quiz) => quiz._id === questionsID);
 
-const questions = showSearch ? listings[questionsID].questions : userListings[questionsID].questions;
+  const questions = showSearch
+    ? listings[questionsID].questions
+    : userListings[questionsID].questions;
   // console.log(questions)
 
   const [userResponses, setUserResponses] = useState(
@@ -535,8 +537,12 @@ const questions = showSearch ? listings[questionsID].questions : userListings[qu
                   questions[currentQuestion] &&
                   questions[currentQuestion].options.map(
                     (option, optionIndex = 0) => {
+                      const isSelected =
+                        userResponses[currentQuestion] === option.id;
+
                       return (
-                        <li className="LI"
+                        <li
+                          className={`LI ${isSelected ? "selected" : ""}`}
                           key={option._id}
                           onClick={() => {
                             const newResponses = [...userResponses];
@@ -544,10 +550,7 @@ const questions = showSearch ? listings[questionsID].questions : userListings[qu
 
                             setUserResponses(newResponses);
                             optionClicked(option.isCorrect);
-                            // if(currentQuestion===questions.length - 2 || currentQuestion===questions.length-1){
-                            //     setShowAlertModal(true);
-                            // }
-                        }}
+                          }}
                           style={{
                             color: "black",
                             cursor: "pointer",
