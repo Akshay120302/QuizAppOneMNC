@@ -17,7 +17,7 @@ const Menu = ({
   handleSubmit,
   setSearchTerm,
   searchTerm,
-  setShowListing
+  setShowListing,
 }) => {
   const navigate = useNavigate();
 
@@ -65,28 +65,82 @@ const Menu = ({
                   setShowSearch(true);
                 }}
               >
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="SearchBar"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <button>
-                  <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
+                <div className="SearchContainer">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="SearchBar"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  <button
+                    style={{
+                      color: "white",
+                      transform: "scale(1.4)",
+                      borderRadius: "10px",
+                      borderWidth: "0px",
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      style={{ color: "black", transform: "scale(1.1)" }}
+                    />
+                  </button>
+                </div>
               </form>
             </div>
 
             <div className="fir">
-              <Link to="/CreateQuiz">Create Quiz</Link>
+              <Link
+                to="/CreateQuiz"
+                style={{
+                  cursor: "pointer",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                Create Quiz
+              </Link>
             </div>
 
-            <div className="fir" style={{cursor: "pointer" }}>Contact</div>
+            <div className="fir">
+              <Link
+                to="/Contact"
+                style={{
+                  cursor: "pointer",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                Contact
+              </Link>
+            </div>
 
-            <div className="fir" style={{cursor: "pointer" }}>About OneMNC</div>
+            <div className="fir">
+              <Link
+                to="/About"
+                style={{
+                  cursor: "pointer",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                About OneMNC
+              </Link>
+            </div>
 
-            <div className="fir" style={{cursor: "pointer" }}>Settings</div>
+            <div className="fir">
+              <Link
+                to="/Settings"
+                style={{
+                  cursor: "pointer",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                Settings
+              </Link>
+            </div>
           </div>
         </div>
       </div>

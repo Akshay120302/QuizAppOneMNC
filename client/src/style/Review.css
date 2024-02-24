@@ -10,7 +10,7 @@
 }
 
 .show .fa-xmark {
-    margin: 1px 1px 683px 1px;
+    margin: 1px 1px 1px 1px;
 }
 
 .btnBoxR {
@@ -33,6 +33,12 @@
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.main .show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnR {
@@ -83,8 +89,7 @@
         background-color: blanchedalmond;
     }
 
-    .main .fa-xmark {
-        margin-left: -340px;
-        margin-top: 40px;
-    }
+    /* .main .fa-xmark {
+        margin-left: p;
+    } */
 }

@@ -7,8 +7,8 @@ function Review({ questions, closeReview, showReview }) {
     return (
         <>
         <div className={`main ${showReview ? 'show' : ''}`}>
-        <FontAwesomeIcon icon = {faXmark} className="fa-solid fa-xmark" onClick={closeReview}/>
             <div className="page">
+            <FontAwesomeIcon icon = {faXmark} className="fa-solid fa-xmark" onClick={closeReview}/>
                 <h1 className='Heading'>Review Page</h1>
                 <br />
                 <div>
