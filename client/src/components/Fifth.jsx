@@ -315,14 +315,14 @@ function Fifth() {
                         </p>
                         <div className="flex flex-col item-center">
                           <button
-                            style={{ color: "red", width: "105px" }}
+                            style={{ color: "red", width: "105px" , outline: "none",border : "0px",backgroundColor: "#e6e6e6" }}
                             onClick={() => handleQuizDelete(listing._id)}
                           >
                             Delete
                           </button>
                           <br />
                           <button
-                            style={{ color: "green" }}
+                            style={{ color: "green" , outline: "none" ,border : "0px" ,backgroundColor: "#e6e6e6"}}
                             onClick={() => {
                               setUpdateQuiz(true);
                               setListingID(listing._id);
