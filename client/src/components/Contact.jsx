@@ -159,41 +159,33 @@ const Contact = () => {
                   icon={faArrowLeft}
                   idname="frame5-5"
                   style={{ color: "#ffffff", transform: "scale(1.5)" }}
-                  // onClick={() => setShowMenu(true)}
                 />
               </Link>
-              {/* <i className="fa-solid fa-bars" idname="frame5-5" style={{color: '#ffffff'}} onClick={() => setShowMenu(true)}></i> */}
+
               {showMenu && <Menu closeMenu={closeMenu} />}
-
-              {/* {currentUser ? (
-                <div className="text-wrapper5-4">{currentUser.username}</div>
-              ) : (
-                <div className="text-wrapper5-4">Hello User</div>
-              )} */}
-
-              <div
-                className="ellipse-wrapper5"
-                onClick={() => setShowLoginModal(true)}
-              >
-                {currentUser ? (
-                  <img
-                    src={currentUser.avatar}
-                    alt="User"
-                    className="profileImgFifth"
-                  />
-                ) : (
-                  <>
-                    <FontAwesomeIcon icon={faUser} />
-
-                    {/* {console.log("This is " + signin)} */}
-                  </>
-                )}
-                {/* <FontAwesomeIcon icon={faUser} /> */}
-              </div>
 
               {showLoginModal && (
                 <MyLoginModal closeLoginModal={closeLoginModal} />
               )}
+            </div>
+            <div
+              className="ellipse-wrapper5New"
+              onClick={() => setShowLoginModal(true)}
+            >
+              {currentUser ? (
+                <img
+                  src={currentUser.avatar}
+                  alt="User"
+                  className="profileImgFifth"
+                />
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faUser} />
+
+                  {/* {console.log("This is " + signin)} */}
+                </>
+              )}
+              {/* <FontAwesomeIcon icon={faUser} /> */}
             </div>
           </div>
           <div className="container5">

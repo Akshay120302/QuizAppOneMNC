@@ -152,18 +152,18 @@ function Fifth() {
               <div className="div5">
                 <div className="overlap-group5">
                   <div className="ellipse5" />
-                  <div className="rectangle5" />
                   <div className="group5">
                     <div className="ellipse5-2" />
                     <div className="ellipse5-3" />
                     <div className="ellipse5-4" />
                     <div className="ellipse5-5" />
                   </div>
+                  <div className="rectangle5" >
                   {showListing ?  '' :(
                   <div className="frame5">
-                    <div className="text-wrapper5">Popular</div>
+                    {/* <div className="text-wrapper5">Popular</div> */}
                     <div className="frame5-2">
-                      <Link to="/quiz">
+                      
                         <div className="frame5-3">
                           <div className="text-wrapper5-2">Space</div>
                           {/* <img className="img" alt="Frame" src="../images/Fifth/frame.svg" /> */}
@@ -185,7 +185,7 @@ function Fifth() {
                             />
                           </svg>
                         </div>
-                      </Link>
+                      
                       <div className="frame5-3">
                         <div className="text-wrapper5-3">History</div>
                         {/* <img className="img" alt="Frame" src="../images/Fifth/image.svg" /> */}
@@ -243,12 +243,7 @@ function Fifth() {
                     </div>
                   </div>)}
                   <div className={`${showListing ? "frame5-4-Modified" : "frame5-4"}`}>
-                    <FontAwesomeIcon
-                      icon={faBars}
-                      idname="frame5-5"
-                      style={{ color: "#ffffff" }}
-                      onClick={() => setShowMenu(true)}
-                    />
+                    
                     {/* <i className="fa-solid fa-bars" idname="frame5-5" style={{color: '#ffffff'}} onClick={() => setShowMenu(true)}></i> */}
                     {showMenu && (
                       <Menu
@@ -271,7 +266,19 @@ function Fifth() {
                       <div className="text-wrapper5-4">Hello User</div>
                     )}
 
-                    <div
+                    
+
+                    {showLoginModal && (
+                      <MyLoginModal closeLoginModal={closeLoginModal} />
+                    )}
+                  </div>
+                  <FontAwesomeIcon
+                      icon={faBars}
+                      idname="frame5-5"
+                      style={{ color: "#ffffff" }}
+                      onClick={() => setShowMenu(true)}
+                    />
+                  <div
                       className={`${showListing ? "ellipse-wrapper5-Modified" : "ellipse-wrapper5"}`}
                       onClick={() => setShowLoginModal(true)}
                     >
@@ -290,11 +297,7 @@ function Fifth() {
                       )}
                       {/* <FontAwesomeIcon icon={faUser} /> */}
                     </div>
-
-                    {showLoginModal && (
-                      <MyLoginModal closeLoginModal={closeLoginModal} />
-                    )}
-                  </div>
+                </div>
                 </div>
                 {showListing ? (
                   <div className="container5">
